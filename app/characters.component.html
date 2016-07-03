@@ -1,0 +1,59 @@
+<div (window:resize)="onResize($event)">
+<p>Making enemies has never been easier! Drag a name over the <b>Enemies</b>
+    tab to add them to your ever-growing list of enemies. </p>
+<div class="nav-box" *ngIf="!bigScreen">
+    <div class="box" (click)='onSelectAffiliation(ally)' [class.selectedAff]="selectedAffiliation === 1" id="allies-box">Allies</div>
+    <div class="box" (click)='onSelectAffiliation(neutral)' [class.selectedAff]="selectedAffiliation === 0" id="neutrals-box ">Neutrals</div>
+    <div class="box" (click)='onSelectAffiliation(enemy)' [class.selectedAff]="selectedAffiliation === -1" id="enemies-box">Enemies</div>
+</div>
+<div class="list-container" *ngIf="charactersArray != undefined">
+
+    <div>
+        Screen width:{{width}} | Number of Characters: {{charactersArray.length}}
+    </div>
+    <ul *ngIf="allySelected() || bigScreen" class="character-list"
+        id="allies-list">
+        <h2 *ngIf="bigScreen">Allies</h2>
+        <li *ngFor="let character of charactersArray | affiliationFilter: ally"
+            draggable="true">
+            <p class="name" (click)="onToggleCharacter(character.id)">{{character.name}}</p>
+            <p class="details clearfix" *ngIf = "isSelectedCharacter(character.id)">
+                <b>Age:</b> {{character.age}} <br>
+                <b>Occupation:</b> {{character.occupation}} <br>
+                <b>Description:</b> {{character.description}} <br>
+                <button (click)="setCharacterToEdit(character)" class="edit-btn">Edit</button>
+            </p>
+        </li>
+    </ul>
+    <ul *ngIf="neutralSelected() || bigScreen" class="character-list"
+        id="neutrals-list">
+        <h2 *ngIf="bigScreen">Neutrals</h2>
+        <li *ngFor="let character of charactersArray | affiliationFilter: neutral"
+            draggable="true">
+            <p class="name" (click)="onToggleCharacter(character.id)">{{character.name}}</p>
+            <p class="details clearfix" *ngIf = "isSelectedCharacter(character.id)">
+                <b>Age:</b> {{character.age}} <br>
+                <b>Occupation:</b> {{character.occupation}} <br>
+                <b>Description:</b> {{character.description}} <br>
+                <button (click)="setCharacterToEdit(character)" class="edit-btn">Edit</button>
+            </p>
+        </li>
+    </ul>
+    <ul *ngIf="enemySelected() || bigScreen" class="character-list"
+        id="enemies-list">
+        <h2 *ngIf="bigScreen">Enemies</h2>
+        <li *ngFor="let character of charactersArray | affiliationFilter: enemy"
+            draggable="true">
+            <p class="name" (click)="onToggleCharacter(character.id)">{{character.name}}</p>
+            <p class="details clearfix" *ngIf = "isSelectedCharacter(character.id)">
+                <b>Age:</b> {{character.age}} <br>
+                <b>Occupation:</b> {{character.occupation}} <br>
+                <b>Description:</b> {{character.description}} <br>
+                <button (click)="setCharacterToEdit(character)" class="edit-btn">Edit</button>
+            </p>
+        </li>
+    </ul>
+</div>
+<button (click)="onAddNew()" class="rounded-btn bottom-right-sticky add-btn"><span>+</span> Add</button>
+<my-edit-character (close)="close($event)" *ngIf="editingCharacter" [character]="characterToEdit"></my-edit-character>
+</div>

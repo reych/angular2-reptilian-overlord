@@ -1,0 +1,107 @@
+.box {
+    width: 20%;
+    display:inline-block;
+    margin: 10px;
+    height: 2em;
+    line-height: 1.5em;
+    border: 2px solid #D6D5C9;
+    border-radius: 5px;
+    /*background-color: #32936F;*/
+    color: #D6D5C9;
+    font-family: 'Exo 2', Arial, Helvetica, sans-serif
+}
+.box:hover, .box:active {
+    background-color: #119DA4;
+
+    /*color: #32936F;
+    border-color: #32936F;*/
+    cursor: pointer;
+}
+.selectedAff {
+    color: #F0BA61;
+    border-color: #F0BA61;
+}
+#enemies-box:hover, #enemies-box:active {
+    background-color: #6F1A07;
+}
+.list-container {
+    text-align: center;
+    position: relative;
+}
+.character-list {
+    margin: 0;
+  list-style-type: none;
+  padding: 0;
+  min-width: 15em;
+  width: 80%;
+  display: inline-block;
+  vertical-align: text-top;
+}
+.character-list li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #ccc;
+  margin: .5em;
+  /*height: 1.6em;*/
+  border-radius: 4px;
+
+  font-size: 1.5em;
+color: #666;
+
+/*line-height: 1em;*/
+position: relative;
+left: -1px;
+top: -4px;
+/*height: 1.8em;*/
+margin-right: .8em;
+}
+.character-list li:hover {
+    background-color: #b3b3b3;
+    left: .1em;
+}
+.character-list li:hover .name {
+    color: white;
+}
+.character-list li:hover .details {
+    cursor: default;
+}
+.name {
+    height: inherit;
+    width: auto;
+    padding: .3em;
+    border-radius: 4px;
+}
+.badge {
+    display: block;
+
+}
+.details {
+    text-align: left;
+    display: block;
+    background-color: white;
+    font-size: 16px;
+    width: 98%;
+    margin: auto;
+    padding: 20px;
+    width: auto;
+    line-height: 1.5em;
+}
+.edit-btn {
+    float: right;
+    border: none;
+    width: 60px;
+    margin-top: 5px;
+}
+.edit-btn:hover, .edit-btn:active {
+    background-color: #b3b3b3;
+    color: white;
+}
+@media only screen and (min-width: 734px){
+    .box{
+        width: 30%;
+    }
+    .character-list{
+        width: 30%;
+    }
+}

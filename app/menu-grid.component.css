@@ -1,0 +1,24 @@
+.container{
+    padding: 1em;
+    background-color: #222;
+    text-align: center;
+}
+.col-sm-6 {
+    text-align: center;
+
+}
+.square-icon {
+    font: 20px arial, sans-serif;
+    background-color: #efefef;
+    height: 200px;
+    width: 80%;
+    margin: .5em;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 200px;
+}
+.square-icon:hover, .square-icon:active{
+    background-color: #FF8C42;
+    color: #efefef;
+}

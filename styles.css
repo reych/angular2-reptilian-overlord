@@ -1,0 +1,49 @@
+h1 {
+  /*color: #369;*/
+  color: #b3b3b3;
+  font-family: 'Exo 2', Arial, Helvetica, sans-serif;
+
+}
+h2{
+    font-family: 'Exo 2', Arial, Helvetica, sans-serif;
+}
+body {
+  margin: 2em;
+  color: #b3b3b3;
+  background-color: #222;
+}
+.rounded-btn {
+    height: 3em;
+    width: 5em;
+    border: none;
+    border-radius: 4px;
+    background-color: #119DA4;
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+}
+.rounded-btn:hover, .rounded-btn:active {
+    background-color: #0a585c;
+}
+.bottom-right-sticky {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+/* clear float */
+	.clearfix:before,
+	.clearfix:after{
+		content:" ";
+		display: table;
+	}
+	.clearfix:after{
+		clear:both;
+	}
+	.clearfix{
+		*zoom:1;
+	}
+
+ /*
+  * See https://github.com/angular/angular.io/blob/master/public/docs/_examples/styles.css
+  * for the full set of master styles used by the documentation samples
+  */

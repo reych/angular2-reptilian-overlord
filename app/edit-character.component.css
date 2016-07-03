@@ -1,0 +1,76 @@
+.character-edit {
+    padding: 1em;
+    border-radius: 4px;
+    background-color:white;
+    width: 50%;
+    max-width: 600px;
+    min-width: 400px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.modal-thing {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.form-table {
+    color: #222;
+    font-size: 20px;
+    font-family: "Helvetica Neue", sans-serif;
+    margin: auto;
+    text-align: left;
+}
+.form-table .row {
+    padding-bottom: 1em;
+}
+input, select, textarea{
+    border-radius: 4px;
+    border: 1px solid #222;
+    width: 100%;
+    padding: 5px;
+}
+textarea {
+    font-size: 16px;
+    vertical-align: text-top;
+    height: 5em;
+}
+label {
+    font-weight: normal;
+}
+.cancel-btn {
+    float: left;
+}
+.save-btn {
+    float: right;
+}
+.close-btn {
+    float: right;
+    position: relative;
+    color: #b3b3b3;
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-color: transparent;
+}
+.close-btn:hover, .close-btn:active {
+    background-color: #b3b3b3;
+    color: white;
+}
+hr {
+    display: block;
+    border-style: outset;
+    border-width: 1px;
+    border-color: #b3b3b3;
+    width: 100%;
+}

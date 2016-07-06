@@ -22,7 +22,7 @@ export class CharactersComponent implements OnInit {
     neutralsArray: Character[];
     enemiesArray: Character[];
     error: any;
-    selectedCharactersArray: Character[] = [];
+    selectedCharactersArray: number[] = [];
     characterToEdit: Character;
 
     // State variables

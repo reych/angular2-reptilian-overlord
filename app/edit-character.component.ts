@@ -18,6 +18,7 @@ export class EditCharacterComponent implements OnInit{
 
     title: string;
     error: any;
+    tempAffiliation: string;
 
     constructor(
         private characterService: CharacterService
@@ -27,14 +28,17 @@ export class EditCharacterComponent implements OnInit{
         if(!this.character) {
             this.character = new Character();
             this.character.affiliation = -1;
+            this.tempAffiliation = "-1";
             this.title = "New Character:";
         } else {
             this.title = "Editing";
+            this.tempAffiliation = this.character.affiliation.toString();
         }
     }
 
     save() {
-        this.character.affiliation = parseInt(this.character.affiliation);
+
+        this.character.affiliation = parseInt(this.tempAffiliation);
         let date = new Date();
         if(!this.character.id) {
             this.character.id = date.getTime();
@@ -51,6 +55,6 @@ export class EditCharacterComponent implements OnInit{
     }
 
     closeWindow() {
-        this.close.emit();
+        this.close.emit(event);
     }
 }

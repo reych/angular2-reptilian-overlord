@@ -4,4 +4,5 @@ export class Character {
     age: number;
     occupation: string;
     affiliation: number;
+    id: number;
 }

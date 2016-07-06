@@ -32,7 +32,7 @@ export class EditCharacterComponent implements OnInit{
             this.title = "New Character:";
         } else {
             this.title = "Editing";
-            this.tempAffiliation = this.character.affiliation.toString(); 
+            this.tempAffiliation = this.character.affiliation.toString();
         }
     }
 

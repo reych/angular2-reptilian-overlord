@@ -11,4 +11,5 @@ The software developers employed under the direct service of the Reptilian Overl
 ..* Update npm: in terminal/command line, npm install npm -g
 * Pull from this repository or download and unzip
 * Navigate to this directory in terminal
-* Type: npm start (Will launch app in browser and do the BrowserSync thing for editing convenience)
+* Terminal: npm install
+* Terminal: npm start (Will launch app in browser and do the BrowserSync thing for editing convenience)

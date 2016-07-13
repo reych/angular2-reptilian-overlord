@@ -1,12 +1,12 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
-import { Character } from './character';
-import { CharacterService } from './character.service'
+import { Character } from '../character-model';
+import { CharacterService } from '../shared'
 
 @Component({
     selector: 'my-edit-character',
-    templateUrl: 'app/edit-character.component.html',
-    styleUrls: ['app/edit-character.component.css']
+    templateUrl: 'app/edit-character/edit-character.component.html',
+    styleUrls: ['app/edit-character/edit-character.component.css']
 })
 
 export class EditCharacterComponent implements OnInit{

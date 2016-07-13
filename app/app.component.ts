@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 
-import { Character } from './character';
-import { CharactersComponent } from './characters.component';
-import { MenuGridComponent } from './menu-grid.component';
-import { CharacterService } from './character.service'
+import { Character } from './character-model/';
+import { CharactersComponent } from './characters';
+import { MenuGridComponent } from './menu-grid';
+import { CharacterService } from './shared';
 @Component({
     selector: 'my-app',
     template: `

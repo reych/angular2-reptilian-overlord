@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { RouteConfig, Router, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 
-import { Character } from './character';
-import { CharactersComponent } from './characters.component';
+import { Character } from '../character-model';
+import { CharactersComponent } from '../characters';
 @Component({
   selector: 'my-menu-grid',
-  templateUrl: 'app/menu-grid.component.html',
-  styleUrls: ['app/menu-grid.component.css'],
+  templateUrl: 'app/menu-grid/menu-grid.component.html',
+  styleUrls: ['app/menu-grid/menu-grid.component.css'],
   directives: [ROUTER_DIRECTIVES]
 })
 

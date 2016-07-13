@@ -1,5 +1,5 @@
 import {Injectable, Pipe, PipeTransform} from '@angular/core';
-import { Character } from './character'
+import { Character } from '../character-model';
 
 @Pipe({
     name: 'affiliationFilter'

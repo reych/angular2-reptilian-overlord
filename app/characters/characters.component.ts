@@ -4,14 +4,13 @@ import { Component, OnInit, trigger,
   transition,
   animate } from '@angular/core';
 
-import { Character } from './character'
-import { CharacterService } from './character.service';
-import { AffiliationFilter } from './affiliation-filter';
-import { EditCharacterComponent} from './edit-character.component';
+import { Character } from '../character-model';
+import { CharacterService, AffiliationFilter } from '../shared';
+import { EditCharacterComponent} from '../edit-character';
 @Component({
   selector: 'my-characters',
-  templateUrl: 'app/characters.component.html',
-  styleUrls: ['app/characters.component.css'],
+  templateUrl: 'app/characters/characters.component.html',
+  styleUrls: ['app/characters/characters.component.css'],
   pipes: [AffiliationFilter],
   directives: [EditCharacterComponent]
 })

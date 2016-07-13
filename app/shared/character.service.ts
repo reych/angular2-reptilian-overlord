@@ -3,7 +3,7 @@ import { Headers, Http } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
-import { Character } from './character';
+import { Character } from '../character-model';
 
 @Injectable()
 export class CharacterService {

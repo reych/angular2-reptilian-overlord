@@ -11,12 +11,12 @@
     <div>
         Screen width:{{width}} | Number of Characters: {{charactersArray.length}}
     </div>
-    <ul *ngIf="allySelected() || bigScreen" class="character-list"
-        id="allies-list">
+    <ul *ngIf="allySelected() || bigScreen" class="character-list connectedSortable"
+        id="allies-list" sortable>
         <h2 *ngIf="bigScreen">Allies</h2>
         <li *ngFor="let character of charactersArray | affiliationFilter: ally"
-            draggable="true">
-            <p class="name" (click)="onToggleCharacter(character.id)">{{character.name}}</p>
+            >
+            <p class="name" (click)="onToggleCharacter(character.id)" >{{character.name}}</p>
             <p class="details clearfix" *ngIf = "isSelectedCharacter(character.id)">
                 <b>Age:</b> {{character.age}} <br>
                 <b>Occupation:</b> {{character.occupation}} <br>
@@ -25,11 +25,11 @@
             </p>
         </li>
     </ul>
-    <ul *ngIf="neutralSelected() || bigScreen" class="character-list"
-        id="neutrals-list">
-        <h2 *ngIf="bigScreen">Neutrals</h2>
+    <ul *ngIf="neutralSelected() || bigScreen" class="character-list connectedSortable"
+        id="neutrals-list" sortable>
+        <h2 *ngIf="bigScreen" class="sort-disabled">Neutrals</h2>
         <li *ngFor="let character of charactersArray | affiliationFilter: neutral"
-            draggable="true">
+            >
             <p class="name" (click)="onToggleCharacter(character.id)">{{character.name}}</p>
             <p class="details clearfix" *ngIf = "isSelectedCharacter(character.id)">
                 <b>Age:</b> {{character.age}} <br>
@@ -39,11 +39,11 @@
             </p>
         </li>
     </ul>
-    <ul *ngIf="enemySelected() || bigScreen" class="character-list"
-        id="enemies-list">
+    <ul *ngIf="enemySelected() || bigScreen" class="character-list connectedSortable"
+        id="enemies-list" sortable>
         <h2 *ngIf="bigScreen">Enemies</h2>
         <li *ngFor="let character of charactersArray | affiliationFilter: enemy"
-            draggable="true">
+            >
             <p class="name" (click)="onToggleCharacter(character.id)">{{character.name}}</p>
             <p class="details clearfix" *ngIf = "isSelectedCharacter(character.id)">
                 <b>Age:</b> {{character.age}} <br>

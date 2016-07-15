@@ -5,13 +5,12 @@ import { Character } from './character-model/';
 import { CharactersComponent } from './characters';
 import { MenuGridComponent } from './menu-grid';
 import { CharacterService } from './shared';
+import { UniverseMapComponent } from './maps'
 @Component({
     selector: 'my-app',
     template: `
         <div class="overall-wrapper">
-            <h1>Reptilian Overlord</h1>
-            <a [routerLink]="['MenuGrid']">Menu</a>
-            <a [routerLink]="['Characters']">People</a>
+            <h1 [routerLink]="['MenuGrid']">Reptilian Overlord</h1>
             <router-outlet></router-outlet>
         </div>
     `,
@@ -19,6 +18,9 @@ import { CharacterService } from './shared';
         .overall-wrapper {
             background-color: #222;
             text-align: center;
+        }
+        h1 {
+            cursor: pointer;
         }
         `],
   directives: [ROUTER_DIRECTIVES],
@@ -28,17 +30,22 @@ import { CharacterService } from './shared';
 })
 
 @RouteConfig([
-  {
+    {
+        path: '/menu',
+        name: 'MenuGrid',
+        component: MenuGridComponent,
+        useAsDefault: true
+    },
+    {
       path: '/characters',
       name: 'Characters',
       component: CharactersComponent
-  },
-  {
-      path: '/menu',
-      name: 'MenuGrid',
-      component: MenuGridComponent,
-      useAsDefault: true
-  }
+    },
+    {
+      path: '/maps',
+      name: 'Maps',
+      component: UniverseMapComponent
+    }
 
 ])
 export class AppComponent {

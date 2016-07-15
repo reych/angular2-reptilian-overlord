@@ -53,20 +53,6 @@ label {
 .save-btn {
     float: right;
 }
-.close-btn {
-    float: right;
-    position: relative;
-    color: #b3b3b3;
-    border: none;
-    height: 40px;
-    width: 40px;
-    border-radius: 20px;
-    background-color: transparent;
-}
-.close-btn:hover, .close-btn:active {
-    background-color: #b3b3b3;
-    color: white;
-}
 hr {
     display: block;
     border-style: outset;

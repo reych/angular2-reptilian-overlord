@@ -12,7 +12,7 @@ import { CharactersComponent } from '../characters';
 
 export class MenuGridComponent {
     constructor(private router: Router){ }
-    gotoLink() {
-        this.router.navigate(['Characters']);
+    gotoLink(link: string) {
+        this.router.navigate([link]);
     }
  }

@@ -13,7 +13,8 @@
     'menu-grid':                  'app/menu-grid',
     'characters':                 'app/characters',
     'edit-character':             'app/edit-character',
-    'character-model':            'app/character-model'
+    'character-model':            'app/character-model',
+    'maps':                       'app/maps'
   };
   // packages tells the System loader how to load when no filename and/or no extension
   var packages = {
@@ -52,7 +53,8 @@
       'characters',
       'character-model',
       'menu-grid',
-      'edit-character'
+      'edit-character',
+      'maps'
   ];
   // Add to packages and set properties:
   function customPackIndex(pkgName) {

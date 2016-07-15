@@ -1,0 +1,27 @@
+
+<div class="wrapper">
+    <img src="img/find.png" height="20px" width="20px">
+    <input [(ngModel)]="search" placeholder="Search planets">
+    <div class="scrollbox">
+        <div class="map" (click)="selectPlanet($event, null, false)">
+            <div class="planets" *ngFor="let planet of planetArray">
+                <div class="sm-planet" [ngStyle]="{'background-image': 'url('+planet.imgUrl+')',
+                    'top': planet.y, 'left': planet.x}" on-mouseover="hoverText(planet.name)"
+                    on-mouseleave="hoverText('')" (click)="selectPlanet($event, planet, true)"
+                    [class.planet-selected]="selectedPlanet && selectedPlanet.name === planet.name">
+                    <label [class.visible]="hoverPlanet === planet.name">{{planet.name}}</label>
+                </div>
+            </div>
+            <div *ngIf="selectedPlanet" class="planet-options">
+                <button>Treaty</button>
+                <button>Ransack</button>
+                <button>Conquer</button>
+                <button>Destroy</button>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="selectedPlanet" class="widget">
+        <b>{{selectedPlanet.name}}</b> <br>
+        {{selectedPlanet.description}}
+    </div>
+</div>

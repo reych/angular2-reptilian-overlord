@@ -5,14 +5,16 @@ import { Component, OnInit, trigger,
   animate } from '@angular/core';
 
 import { Character } from '../character-model';
-import { CharacterService, AffiliationFilter } from '../shared';
+import { CharacterService, AffiliationFilter, SortableDirective, DraggableDirective } from '../shared';
 import { EditCharacterComponent} from '../edit-character';
 @Component({
   selector: 'my-characters',
   templateUrl: 'app/characters/characters.component.html',
   styleUrls: ['app/characters/characters.component.css'],
   pipes: [AffiliationFilter],
-  directives: [EditCharacterComponent]
+  directives: [EditCharacterComponent,
+                SortableDirective,
+                DraggableDirective]
 })
 export class CharactersComponent implements OnInit {
     // Data
@@ -23,6 +25,7 @@ export class CharactersComponent implements OnInit {
     error: any;
     selectedCharactersArray: number[] = [];
     characterToEdit: Character;
+    currentDragged: Character;
 
     // State variables
     selectedAffiliation: number = -1;
@@ -122,6 +125,14 @@ export class CharactersComponent implements OnInit {
     close() {
       this.getCharacters();
       this.editingCharacter = false;
+    }
+
+    onDrop(event) {
+        alert(" has been dropped");
+    }
+
+    onDrag() {
+        alert("Someone is being dragged");
     }
 
 
